@@ -2,7 +2,6 @@ import os
 import argparse
 import requests
 from dotenv import load_dotenv
-load_dotenv()
 
 BITLY_TOKEN = os.getenv("BITLY_TOKEN")
 BITLY_BASE_URL = "https://api-ssl.bitly.com/v4/{}"
@@ -53,4 +52,5 @@ def main():
             print("Упс!!! Вы ввели неверную ссылку. Проверьте ее и попробуйте еще раз...")
 
 if __name__ == "__main__":
+    load_dotenv()
     main()
