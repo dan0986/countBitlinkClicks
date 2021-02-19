@@ -6,40 +6,50 @@
 
 Для того, чтобы скрипт работал, для начала нужно зарегистрироваться на сайте [bitly](https://app.bitly.com) и получить токен доступа к сервису. Документация, как это сделать находится по следующему адресу: [https://dev.bitly.com/v4/#section/Authentication](https://dev.bitly.com/v4/#section/Authentication) . 
 После получения токена, его нужно скопировать в файл .env, предварительно его создав. Синтаксис файла следующий:
-> Пример файла .env :
-`BITLY_TOKEN=12dFd5432njsd2923n2oi2e92392j2ednc922d2d`
-> 
-> ***
-> *Указанный токен не будет работать, здесь в качестве примера.
-> *** 
-Python3 должен быть уже установлен. Рекомендуется использовать виртуальное окружение для изодяции проекта [virtualenv/venv](https://docs.python.org/3/library/venv.html) . Затем используйте `pip` (или `pip3`, есть конфликт с Python2) для 
-установки зависимостей:
 
- >`pip install -r requirements.txt`
+> Пример файла .env :
+
+```sh
+	BITLY_TOKEN=12dFd5432njsd2923n2oi2e92392j2ednc922d2d
+```
+
+> ***
+> Указанный токен не будет работать, здесь в качестве примера.
+> *** 
+
+`python3` должен быть уже установлен. Рекомендуется использовать виртуальное окружение для изодяции проекта [virtualenv/venv](https://docs.python.org/3/library/venv.html) . Затем используйте `pip3` для установки зависимостей:
+
+```sh
+	pip install -r requirements.txt
+```
 
 ## Пример запуска скрипта
 Перейдите в папку проекта и запустите сам скрипт:
->`python3 main.py https://ya.ru`
->
->`Короткая ссылка bit.ly/31sGGA3`
->
->`По вашей ссылке перешли 2 раз(а)`
+
+```sh
+	python3 main.py https://ya.ru
+	Короткая ссылка bit.ly/31sGGA3
+	По вашей ссылке перешли 2 раз(а)
+```
 
 Для вывода справки, нужно добавить аргумент `-h`:
->`python3 main.py -h`
->
->`usage: main.py [-h] url`
->
->`Скрипт для генерации короткой ссылки (bitlink) и подсчета кол-ва перехода по`
->`ней при помощи сервиса BITLY.`
->
->`positional arguments:`
->
->`  url         URL для создания короткой ссылки`
->
->`optional arguments:`
->
->`  -h, --help  show this help message and exit`
+
+```sh
+	python3 main.py -h
+
+	usage: main.py [-h] url
+
+	Скрипт для генерации короткой ссылки (bitlink) и подсчета кол-ва перехода по
+	ней при помощи сервиса BITLY.
+
+	positional arguments:
+
+	url         URL для создания короткой ссылки
+
+	optional arguments:
+
+   -h, --help  show this help message and exit
+```
 
 ## Цель проекта
 
